@@ -16,16 +16,15 @@ let app = new Vue({
         for (let index = 0; index < 10; index++) {
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then(function (response) {   
-            console.log(response);
-            self.mail = response.data.response;
-            self.mailList.push(self.mail);
-            console.log(self.mailList);
+                console.log(response);
+                self.mail = response.data.response;
+                self.mailList.push(self.mail);
             })
-        .catch(function (error) {
-          console.log(error);
-        })   
+            .catch(function (error) {
+                 console.log(error);
+            })   
         }
-        
+        console.log(self.mailList);
     }
 }
 )

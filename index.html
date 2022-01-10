@@ -10,7 +10,8 @@
 </head>
 <body>
     <div id="app">
-        <ul>
+        <!-- Bonus: Aggiunta del v-if per stampare quando l'array è pieno  -->
+        <ul v-if="mailList.length == 10"> 
             <li v-for="(mail) in mailList">
                 <p>{{mail}}</p>
             </li>
